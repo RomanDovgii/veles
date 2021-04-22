@@ -68,9 +68,14 @@ html(lang="ru")
                     each itemNavigation in siteNavigations 
                         a.navigation__link(href="")= itemNavigation
                 a.header__tel(href="tel:+79276784514")
+                    svg.header__phone(width="9", height="13", viewBox="0 0 9 13", fill="none", xmlns="http://www.w3.org/2000/svg")
+                        include ../img/icons/phone.svg
                     | +7 (927) 678-45-14
-                a.header__address г. Казань, Складская 20
-                button.header__button 
+                a.header__address 
+                    svg.header__marker(width="9", height="13", viewBox="0 0 9 13", fill="none", xmlns="http://www.w3.org/2000/svg")
+                        include ../img/icons/marker.svg
+                    | г. Казань, Складская 20
+                button.header__button
                     span.visually-hidden Открыть мобильное меню
 
         main
@@ -83,8 +88,12 @@ html(lang="ru")
                         .promo__controls.controls 
                             button.controls__previous 
                                 span.visually-hidden предыдущий слайд
+                                svg.controls__arrow.cpntrols__arrow--prev(width="25", height="9", viewBox="0 0 25 9", fill="currentColor", xmlns="http://www.w3.org/2000/svg")
+                                    include ../img/icons/arrow.svg
                             button.controls__next 
                                 span.visually-hidden следующий слайд
+                                svg.controls__arrow.cpntrols__arrow--next(width="25", height="9", viewBox="0 0 25 9", fill="currentColor", xmlns="http://www.w3.org/2000/svg")
+                                    include ../img/icons/arrow.svg
                             p.controls__slides
                                 span.controls__current 1
                                 |/

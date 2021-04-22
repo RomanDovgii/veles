@@ -19,6 +19,7 @@
     text-decoration: none;
     color: #ffffff;
     padding-left: 2rem;
+    position: relative;
 }
 
 .header__tel {
@@ -32,9 +33,24 @@
 .header__address {
     font-size: 1rem;
     margin-top: 1.3rem;
-    margin-right: 2.5rem;
+    margin-right: 3.4rem;
 }
 
 .header__button {
     display: none;
+}
+
+.header__phone,
+.header__marker {
+    position: absolute;
+}
+
+.header__phone {
+    top: 2px;
+    left: 1px;
+}
+
+.header__marker {
+    top: 0;
+    left: 3px;
 }

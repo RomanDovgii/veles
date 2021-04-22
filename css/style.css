@@ -84,6 +84,7 @@ body {
   text-decoration: none;
   color: #ffffff;
   padding-left: 2rem;
+  position: relative;
 }
 
 .header__tel {
@@ -97,15 +98,26 @@ body {
 .header__address {
   font-size: 1rem;
   margin-top: 1.3rem;
-  margin-right: 2.5rem;
+  margin-right: 3.4rem;
 }
 
 .header__button {
   display: none;
 }
 
-.logo {
-  margin-left: 9px;
+.header__phone,
+.header__marker {
+  position: absolute;
+}
+
+.header__phone {
+  top: 2px;
+  left: 1px;
+}
+
+.header__marker {
+  top: 0;
+  left: 3px;
 }
 
 .logo__img {
@@ -154,11 +166,11 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   margin-top: 5rem;
-  margin-left: 0.9rem;
 }
 
 .promo__content {
   max-width: 577px;
+  padding-bottom: 3.9rem;
 }
 
 .promo__order {
@@ -173,13 +185,49 @@ body {
   background-color: #ffe500;
   color: #161616;
   margin-top: 4.5rem;
-  margin-left: 0.9rem;
   text-transform: uppercase;
   text-decoration: none;
   font-weight: 700;
   font-size: 1.9rem;
   letter-spacing: 0.15rem;
   padding-left: 5rem;
+}
+
+.controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: 7rem;
+  margin-right: 3.8rem;
+  margin-left: auto;
+}
+
+.controls__previous,
+.controls__next {
+  background: none;
+  border: none;
+}
+
+.controls__next {
+  -webkit-box-ordinal-group: 6;
+      -ms-flex-order: 5;
+          order: 5;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  margin-left: 5px;
+}
+
+.controls__previous {
+  margin-right: 20px;
+}
+
+.controls__slides {
+  color: #ffffff;
+  font-size: 1.8rem;
+  letter-spacing: 1rem;
 }
 
 .slider {
@@ -191,7 +239,7 @@ body {
   height: 506px;
   position: absolute;
   top: -2px;
-  left: 5px;
+  left: -4px;
 }
 
 .slider__img {
