@@ -1,0 +1,13 @@
+*,
+*::before,
+*::after {
+    @include reset;
+}
+
+body {
+    font-family: 'Raleway', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: $white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
