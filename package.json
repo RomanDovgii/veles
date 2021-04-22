@@ -1,0 +1,37 @@
+{
+  "name": "webpack-config-for-basic-html-css-js",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Универсальный сборщик для CSS, HTML, JS",
+  "scripts": {
+    "eslint": "eslint --ext .js src/",
+    "test": "npm run eslint",
+    "build": "webpack --mode production",
+    "start": "webpack-dev-server --open"
+  },
+  "devDependencies": {
+    "@babel/core": "7.12.9",
+    "@babel/preset-env": "7.8.7",
+    "@babel/preset-react": "7.8.3",
+    "babel-loader": "8.2.2",
+    "copy-webpack-plugin": "6.4.1",
+    "css-loader": "5.1.1",
+    "eslint": "5.13.0",
+    "eslint-config-htmlacademy": "0.5.2",
+    "file-loader": "6.2.0",
+    "html-webpack-plugin": "4.5.0",
+    "node-sass": "5.0.0",
+    "raw-loader": "4.0.2",
+    "sass-loader": "10.1.0",
+    "sass-sourcemap-loader": "0.0.1",
+    "split-by-path-webpack-plugin": "1.0.0",
+    "style-loader": "2.0.0",
+    "url-loader": "4.1.1",
+    "webpack": "4.41.6",
+    "webpack-cli": "3.3.12",
+    "webpack-dev-server": "3.10.3"
+  },
+  "engines": {
+    "node": "10"
+  }
+}
