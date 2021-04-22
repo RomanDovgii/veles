@@ -1,0 +1,146 @@
+doctype html
+- const siteNavigations = [`земля`, `крановые площадки`, `выгрузка вагонов`, `фасовка`, `щебень`];
+- const benefits = [`11,5 га площадь базы`, `2 своих тепловоза`, `Повышенный путь для выгрузки инертных грузов`, `8 км от центра Казани`, `возможность выгрузки хопров и сыпучих грузов`, `Железнодорожные весы на 2 вагона`, `Автомобильные весы 18 м на 80 тонн`, `3 пандуса для выгрузки и загрузки крытых вагонов и фур`, `Козловой кран`];
+-
+ const services = [
+    {
+        name: `Крановая площадка`,
+        img: `img/services/crane.jpg`,
+        isMap: true
+    },
+    {
+        name: `Товары сельского хозяйства`,
+        img: `img/services/agriculture.jpg`,
+        isMap: false
+    },
+    {
+        name: `Фасовка от 300 гр до 1 тонны`,
+        img: `img/services/package.jpg`,
+        isMap: false
+    },
+    {
+        name: `Гранитный щебень`,
+        img: `img/services/gravel.jpg`,
+        isMap: false
+    },
+    {
+        name: `Аренда земли`,
+        img: `img/services/land.jpg`,
+        isMap: true
+    },
+    {
+        name: `Аренда складов`,
+        img: `img/services/storage.jpg`,
+        isMap: true
+    },
+    {
+        name: `Выгрузка вагонов и ответственное хранение`,
+        img: `img/services/unloading.jpg`,
+        isMap: false
+    },
+    {
+        name: `Автомобильные весы 18м, 80тн`,
+        img: `img/services/scale.jpg`,
+        isMap: false
+    },
+    {
+        name: `Железнодорожные весы на 2 вагона`,
+        img: `img/services/scale-trains.jpg`,
+        isMap: false
+    }
+ ];
+
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Veles
+        link(rel="stylesheet", href="css/style.css")
+    body 
+        header.header
+            h1.visually-hidden Veles
+            a.header__logo.logo veles 
+            nav.header_navigation.navigation
+                each itemNavigation in siteNavigations 
+                    a.navigation__link= itemNavigation
+            a.header__tel(href="tel:+79276784514") +7 (927) 678-45-14
+            a.header__address г. Казань, Складская 20
+            button.header__button 
+                span.visually-hidden Открыть мобильное меню
+
+        main
+            section.promo
+                h2.visually-hidden О нашей компании
+                .promo__wrapper
+                    .promo__content
+                        p.promo__text Выгрузка вагонов, аренда земли, крановых площадок, ответственное хранение
+                        a.promo__order(href="#") Заказать
+                        .promo__controls.controls 
+                            button.controls__previous 
+                                span.visually-hidden предыдущий слайд
+                            button.controls__next 
+                                span.visually-hidden следующий слайд
+                            p.controls__slides
+                                span.controls__current 1
+                                |/
+                                span.controls__all 3
+                    .promo__slider.slider 
+                        .slide
+            section.services 
+                h2.visually-hidden Наши услуги
+                .services__wrapper 
+                    p.services__text Чем мы можем быть полезны?
+                    ul.services__list 
+                        each service in services 
+                            li.serivces__service-card.service-card 
+                                if service.isMap 
+                                    a.service-card__map Смотреть карту территорий
+                                img.service-card__img(src=service.img, alt=service.name)
+                                a.service-card__name(href="#")= service.name
+            section.benefits 
+                h2.benefits__heading Наши преимущества
+                ol.benefits__list
+                    each benefit in benefits
+                        li.benefits__item 
+                            p.benefits__text= benefit
+            section.map
+                h2.map__heading Карта территорий
+                img.map__img(src="img/map.svg", alt="Карта нашей территории")
+            section.rent 
+                .rent_wrapper
+                    .rent__content
+                        h2.rent__heading Аренда земли
+                        p.rent__text.
+                            Предлагаем в аренду открытые площадки для хранения грузов и техники. Площадь базы составляет 11,5га. Общая протяженность внутренних ж/д путей позволяет производить погрузо-разгрузочные работы до 60 вагонов в сутки единовременно. На базе работают два маневровых
+                            собственных тепловоза. Есть железнодорожные
+                            и автомобильные весы, козловой кран, повышенный
+                            путь, пандусы для выгрузки крытых вагонов и фур.
+                        a.rent__consult(href="#") Получить консультацию 
+                    .rent__img-block 
+                        img.rent__img(src="img/territories/land.jpg", alt="Виды на ваше будущее арендованное место")
+            section.store
+                .store__wrapper 
+                    .store__content 
+                        h2.store__heading Аренда складов
+                        p.store__text Предлагаем в аренду крытые и открытые складские и производственные площадки. Склады комплекса оснащены погрузочно-разгрузочной техникой. Открытые складские площадки приспособлены и для хранения негабаритных грузов. Собственный ж.д. подъездной путь. Охраняемая территория, удобные подъездные пути для любых видов транспорта. На закрытой территории базы обеспечивается функционирование всех инженерных сетей.
+                        a.store__consult(href="#") Получить консультацию
+                    .store__img-block 
+                        img.store__img(src="img/territories/store.jpg", alt="Вид на ваш будущий склад")
+            section.form 
+                h2.form__heading УЗНАТЬ О ЦЕНАХ, ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ ИЛИ ПЕРСОНАЛЬНОЕ ПРЕДЛОЖЕНИЕ
+                form.form__form
+                    label.visually-hidden(for="name") Имя                
+                    input.form__input(type="text", name="name", placeholder="Имя", required)
+
+                    label.visually-hidden(for="tel") Телефон 
+                    input.form__input(type="text", name="tel", placeholder="Телефон", required)
+
+                    button.form__submit(type="submit") Отправить                
+        footer.footer
+            a.footer__logo.logo veles 
+            nav.footer_navigation.navigation
+                each itemNavigation in siteNavigations 
+                    a.navigation__link= itemNavigation
+            a.footer__tel(href="tel:+79276784514") +7 (927) 678-45-14
+            a.footer__address г. Казань, Складская 20
