@@ -1,0 +1,15 @@
+.navigation {
+    display: flex;
+    margin-left: 78px;
+    padding-top: 0.7rem;
+}
+
+.navigation__link {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.7rem;
+    letter-spacing: 0.014rem;
+    &:not(:first-child) {
+        margin-left: 3.2rem;
+    }
+}

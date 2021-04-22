@@ -59,15 +59,19 @@ html(lang="ru")
         link(rel="stylesheet", href="css/style.css")
     body 
         header.header
-            h1.visually-hidden Veles
-            a.header__logo.logo veles 
-            nav.header_navigation.navigation
-                each itemNavigation in siteNavigations 
-                    a.navigation__link= itemNavigation
-            a.header__tel(href="tel:+79276784514") +7 (927) 678-45-14
-            a.header__address г. Казань, Складская 20
-            button.header__button 
-                span.visually-hidden Открыть мобильное меню
+            .header__wrapper
+                h1.visually-hidden Veles
+                a.header__logo.logo 
+                    svg.logo__img(width="91", height="38", viewBox="0 0 91 38", fill="none", xmlns="http://www.w3.org/2000/svg")
+                        include ../img/logo/logo.svg
+                nav.header_navigation.navigation
+                    each itemNavigation in siteNavigations 
+                        a.navigation__link(href="")= itemNavigation
+                a.header__tel(href="tel:+79276784514")
+                    | +7 (927) 678-45-14
+                a.header__address г. Казань, Складская 20
+                button.header__button 
+                    span.visually-hidden Открыть мобильное меню
 
         main
             section.promo
@@ -86,7 +90,8 @@ html(lang="ru")
                                 |/
                                 span.controls__all 3
                     .promo__slider.slider 
-                        .slide
+                        .slider__slide
+                            img.slider__img(src="/img/slides/first slide/train_cars@1x.jpg", alt="train carts")
             section.services 
                 h2.visually-hidden Наши услуги
                 .services__wrapper 
@@ -138,9 +143,12 @@ html(lang="ru")
 
                     button.form__submit(type="submit") Отправить                
         footer.footer
-            a.footer__logo.logo veles 
-            nav.footer_navigation.navigation
-                each itemNavigation in siteNavigations 
-                    a.navigation__link= itemNavigation
-            a.footer__tel(href="tel:+79276784514") +7 (927) 678-45-14
-            a.footer__address г. Казань, Складская 20
+            .footer__wrapper
+                a.footer__logo.logo 
+                    svg.logo__img(width="91", height="38", viewBox="0 0 91 38", fill="none", xmlns="http://www.w3.org/2000/svg")
+                        include ../img/logo/logo.svg
+                nav.footer_navigation.navigation
+                    each itemNavigation in siteNavigations 
+                        a.navigation__link= itemNavigation
+                a.footer__tel(href="tel:+79276784514") +7 (927) 678-45-14
+                a.footer__address г. Казань, Складская 20

@@ -1,0 +1,47 @@
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  position: absolute;
+}
+
+.header__wrapper {
+  max-width: 1170px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 29px;
+  padding-bottom: 30px;
+}
+
+.header__tel,
+.header__address {
+  font-size: 1.7rem;
+  text-decoration: none;
+  color: #ffffff;
+  padding-left: 2rem;
+}
+
+.header__tel {
+  font-size: 1.3rem;
+  letter-spacing: 0.13rem;
+  margin-top: 1rem;
+  margin-right: 3.6rem;
+  margin-left: auto;
+}
+
+.header__address {
+  font-size: 1rem;
+  margin-top: 1.3rem;
+  margin-right: 2.5rem;
+}
+
+.header__button {
+  display: none;
+}
+/*# sourceMappingURL=header.css.map */

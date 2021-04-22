@@ -25,6 +25,12 @@
 *::after {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
 }
 
 body {
@@ -38,6 +44,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  overflow-x: hidden;
 }
 
 .visually-hidden {
@@ -56,10 +63,142 @@ body {
 
 .header {
   background-color: #161616;
+  width: 100%;
+  position: absolute;
+}
+
+.header__wrapper {
+  max-width: 117rem;
+  width: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 29px;
+  padding-bottom: 30px;
+}
+
+.header__tel,
+.header__address {
+  font-size: 1.7rem;
+  text-decoration: none;
+  color: #ffffff;
+  padding-left: 2rem;
+}
+
+.header__tel {
+  font-size: 1.3rem;
+  letter-spacing: 0.13rem;
+  margin-top: 1rem;
+  margin-right: 3.6rem;
+  margin-left: auto;
+}
+
+.header__address {
+  font-size: 1rem;
+  margin-top: 1.3rem;
+  margin-right: 2.5rem;
+}
+
+.header__button {
+  display: none;
+}
+
+.logo {
+  margin-left: 9px;
+}
+
+.logo__img {
+  color: #ffffff;
+}
+
+.navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 78px;
+  padding-top: 0.7rem;
+}
+
+.navigation__link {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.7rem;
+  letter-spacing: 0.014rem;
+}
+
+.navigation__link:not(:first-child) {
+  margin-left: 3.2rem;
 }
 
 .promo {
   background-color: #161616;
+  padding-top: 18rem;
+  width: 100%;
+}
+
+.promo__wrapper {
+  max-width: 117rem;
+  width: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.promo__text {
+  color: #ffffff;
+  font-size: 2.7rem;
+  line-height: 4.5rem;
+  letter-spacing: 0.33rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 5rem;
+  margin-left: 0.9rem;
+}
+
+.promo__content {
+  max-width: 577px;
+}
+
+.promo__order {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 214px;
+  min-height: 60px;
+  background-color: #ffe500;
+  color: #161616;
+  margin-top: 4.5rem;
+  margin-left: 0.9rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.9rem;
+  letter-spacing: 0.15rem;
+  padding-left: 5rem;
+}
+
+.slider {
+  position: relative;
+}
+
+.slider__slide {
+  width: 972px;
+  height: 506px;
+  position: absolute;
+  top: -2px;
+  left: 5px;
+}
+
+.slider__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .services {
