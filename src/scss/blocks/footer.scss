@@ -3,3 +3,50 @@
     margin-top: auto;
     margin-bottom: 0;
 }
+
+.footer__wrapper {
+  max-width: 117rem;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  padding-top: 29px;
+  padding-bottom: 30px;
+}
+
+.footer__tel,
+.footer__address {
+    font-size: 1.7rem;
+    text-decoration: none;
+    color: #ffffff;
+    padding-left: 2rem;
+    position: relative;
+}
+
+.footer__tel {
+    font-size: 1.3rem;
+    letter-spacing: 0.13rem;
+    margin-top: 1rem;
+    margin-right: 3.6rem;
+    margin-left: auto;
+}
+
+.footer__address {
+    font-size: 1rem;
+    margin-top: 1.3rem;
+    margin-right: 3.4rem;
+}
+
+.footer__phone,
+.footer__marker {
+    position: absolute;
+}
+
+.footer__phone {
+    top: 2px;
+    left: 1px;
+}
+
+.footer__marker {
+    top: 0;
+    left: 3px;
+}
