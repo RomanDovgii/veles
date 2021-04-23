@@ -1,12 +1,17 @@
 .service-card {
+  transition: transform 0.5s;
   position: relative;
   display: flex;
   flex-direction: column;
   background-color: #ffffff;
   max-width: 370px;
+
+  &:hover {
+    transform: translateY(-20px);
+  }
 }
 
-.service-card__map {
+.service-card__on-map {
   position: absolute;
   top: 0;
   left: 0;
@@ -33,5 +38,4 @@
   letter-spacing: 0.28rem;
 
   min-height: 11.5rem;
-
 }

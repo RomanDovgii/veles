@@ -1,0 +1,28 @@
+.on-map {
+  height: 5.4rem;
+  width: 5.7rem;
+
+  background-color: $yellow;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+
+  transition: width 0.8s;
+
+  &:hover {
+    width: 100%;
+    max-width: 31.6rem;
+  }
+}
+
+.on-map__img {
+  margin-left: 1rem;
+}
+
+.on-map__text {
+  margin-left: 1.4rem;
+  font-size: 1.8rem;
+  color: #161616;
+  white-space: nowrap;
+}
