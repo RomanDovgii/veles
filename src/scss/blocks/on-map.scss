@@ -1,8 +1,10 @@
+@use "../utils/variables";
+
 .on-map {
   height: 5.4rem;
   width: 5.7rem;
 
-  background-color: $yellow;
+  background-color: variables.$yellow;
   overflow: hidden;
   display: flex;
   align-items: center;

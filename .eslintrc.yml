@@ -4,16 +4,10 @@ env:
   commonjs: true
   jest: true
 
-extends: ['htmlacademy/es6', 'plugin:react/recommended']
+extends: ['airbnb/es6']
 
 parserOptions:
   ecmaFeatures:
     jsx: true
   ecmaVersion: 6
   sourceType: module
-
-plugins: ['react']
-
-settings:
-  react:
-    version: '16'

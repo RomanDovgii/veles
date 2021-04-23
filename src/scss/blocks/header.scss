@@ -1,5 +1,7 @@
+@use "../utils/variables";
+
 .header {
-    background-color: $black;
+    background-color: variables.$black;
     width: 100%;
     position: absolute;
 }

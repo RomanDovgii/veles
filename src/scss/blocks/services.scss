@@ -1,5 +1,7 @@
+@use "../utils/variables";
+
 .services {
-  background-color: $grey;
+  background-color: variables.$grey;
   padding-top: 21.4rem;
   padding-bottom: 7rem;
 }

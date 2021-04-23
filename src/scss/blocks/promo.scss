@@ -1,5 +1,7 @@
+@use "../utils/variables";
+
 .promo {
-    background-color: $black;
+    background-color: variables.$black;
     padding-top: 18rem;
     width: 100%;
 }
@@ -32,7 +34,7 @@
     align-items: center;
     max-width: 214px;
     min-height: 60px;
-    background-color: $yellow;
+    background-color: variables.$yellow;
     color: #161616;
     margin-top: 4.5rem;
     text-transform: uppercase;

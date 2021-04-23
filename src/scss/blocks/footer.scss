@@ -1,5 +1,7 @@
+@use "../utils/variables";
+
 .footer {
-    background-color: $black;
+    background-color: variables.$black;
     margin-top: auto;
     margin-bottom: 0;
 }

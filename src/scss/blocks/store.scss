@@ -1,3 +1,5 @@
+@use "../utils/variables";
+
 .store {
-    background-color: $black;
+    background-color: variables.$black;
 }

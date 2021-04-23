@@ -1,8 +1,7 @@
-const HtmlWebpackPlugin = require(`html-webpack-plugin`);
-const SplitByPathPlugin = require(`split-by-path-webpack-plugin`);
-const CopyPlugin = require(`copy-webpack-plugin`);
-const fs = require(`fs`);
 const path = require(`path`);
+const fs = require(`fs`);
+const HtmlPlugin = require(`html-webpack-plugin`);
+const CopyPlugin = require(`copy-webpack-plugin`);
 
 function generateHtmlPlugins(templateDir) {
     const templateFiles = fs.readdirSync(path.resolve(__dirname, templateDir));
@@ -12,7 +11,7 @@ function generateHtmlPlugins(templateDir) {
         const name = parts[0];
         const extension = parts[1];
 
-        return new HtmlWebpackPlugin({
+        return new HtmlPlugin({
             filename: `${name}.html`,
             template: path.resolve(__dirname, `${templateDir}/${name}.${extension}`),
             inject: true,
@@ -30,27 +29,30 @@ module.exports = {
     ],
     output: {
         filename: `./js/bundle.js`,
-        path: path.resolve(__dirname, `public`)
+        path: path.resolve(__dirname, `build`),
     },
     devServer: {
-        contentBase: path.resolve(__dirname, `public`),
+        contentBase: path.resolve(__dirname, `build`),
         open: false,
-        port: 8089,
+        port: 9111,
         historyApiFallback: true,
-        contentBase: path.resolve(__dirname, `/public`),
+        contentBase: path.resolve(__dirname, `/build`),
         watchContentBase: true,
     },
-    devtool: `source-map`,
     module: {
-        rules:
-        [
+        rules: [
             {
                 test: /\.(js)$/,
                 include: path.resolve(__dirname, `src/js`),
-                exclude: /node_modules/,
-                use: {
-                    loader: `babel-loader`,
-                }
+                exclude: /(node_modules)/,
+                use: [
+                    {
+                        loader: `babel-loader`,
+                        options: {
+                            presets: [`@babel/preset-env`]
+                        }
+                    }
+                ]
             },
             {
                 test: /\.(sass|scss)$/,
@@ -58,40 +60,38 @@ module.exports = {
                 use: [
                     {
                         loader: `file-loader`,
-                        options: {outputPath: `css/`, name: `style.min.css`}
+                        options: {
+                            outputPath: `css/`,
+                            name: `style.min.css`,
+                        }
                     },
-                    `sass-sourcemap-loader`,
                     {
-                      loader: `sass-loader`,
-                      options: {
-                        sourceMap: true,
-                      },
-                    },
-                ]
+                        loader: `sass-loader`,
+                        options: {
+                            sourceMap: true
+                        }
+                    }
+                ],
             },
             {
-                test: /\.html$/,
-                include: path.resolve(__dirname, `src/html/includes`),
+                test: /\.(html)$/,
+                include: path.resolve(__dirname, `src/html`),
                 use: [`raw-loader`]
-            },
+            }
+
         ]
-    },
-    resolve: {
-        extensions: [`.js`, `.jsx`]
     },
     plugins: [
 
         new CopyPlugin({
           patterns: [
-            //remove this part if you don`t need to copy fonts
             {
               from: path.resolve(__dirname, `src/fonts`),
-              to: path.resolve(__dirname, `public/fonts/`),
+              to: path.resolve(__dirname, `build/fonts/`),
             },
-            // remove this part if you don`t need to copy images
             {
               from: path.resolve(__dirname, `src/img`),
-              to: path.resolve(__dirname, `public/img/`),
+              to: path.resolve(__dirname, `build/img/`),
             }
           ],
         }),
