@@ -2,7 +2,8 @@
 
 .on-map {
   height: 5.4rem;
-  width: 5.7rem;
+  width: 100%;
+  max-width: 5.7rem;
 
   background-color: variables.$yellow;
   overflow: hidden;
@@ -10,7 +11,7 @@
   align-items: center;
   text-decoration: none;
 
-  transition: width 0.8s;
+  transition: max-width 0.8s;
 
   &:hover {
     width: 100%;

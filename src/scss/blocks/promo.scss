@@ -1,4 +1,5 @@
 @use "../utils/variables";
+@use "../utils/mixins";
 
 .promo {
     background-color: variables.$black;
@@ -7,8 +8,7 @@
 }
 
 .promo__wrapper {
-    max-width: 117rem;
-    width: 100%;
+    @include mixins.wrapper-desktop;
     margin: 0 auto;
     display: flex;
 }

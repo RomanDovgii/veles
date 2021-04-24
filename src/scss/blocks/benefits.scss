@@ -17,7 +17,7 @@
 
 .benefits__list {
   list-style: none;
-  margin-top: 8.6rem;
+  margin-top: 0.7rem;
   max-width: 101rem;
   width: 100%;
   display: flex;
@@ -31,8 +31,19 @@
   display: flex;
   position: relative;
   width: 27.3rem;
-  width: 100%;
-  max-width: 33.6rem;
+  margin-top: 7.9rem;
+
+  &:nth-child(3n + 1) {
+    width: 38.7rem;
+  }
+
+  &:nth-child(3n + 2) {
+    width: 37.3rem;
+  }
+
+  &:nth-child(3n + 3) {
+    width: 25rem;
+  }
 
   &::after {
     content: "0"counter(li);
@@ -42,6 +53,7 @@
     background-color: variables.$yellow;
 
     display: flex;
+    flex-shrink: 1;
     justify-content: center;
     align-items: center;
 
@@ -56,9 +68,14 @@
 .benefits__text {
   font-weight: 600;
   font-size: 1.6rem;
+  margin-left: 4rem;
 
   &::before {
     content: counter(li);
     position: absolute;
+    top: -7rem;
+    font-weight: 600;
+    font-size: 8rem;
+    color: rgba(#000, 0.03);
   }
 }
