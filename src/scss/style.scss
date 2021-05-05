@@ -4,7 +4,6 @@
 @use "utils/general";
 @use "blocks/visually-hidden";
 
-@use "blocks/header";
 @use "blocks/logo";
 @use "blocks/navigation";
 @use "blocks/promo";
@@ -18,4 +17,5 @@
 @use "blocks/rent";
 @use "blocks/store";
 @use "blocks/form";
+@use "blocks/header";
 @use "blocks/footer";

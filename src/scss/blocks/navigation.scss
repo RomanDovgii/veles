@@ -1,6 +1,7 @@
+@use "../utils/variables";
+
 .navigation {
     display: flex;
-    margin-left: 7.8rem;
     padding-top: 0.7rem;
 }
 
@@ -9,6 +10,7 @@
     color: #ffffff;
     font-size: 1.7rem;
     letter-spacing: 0.014rem;
+
     &:not(:first-child) {
         margin-left: 3.2rem;
     }
@@ -19,6 +21,10 @@
       }
     }
 
+    &--special {
+      display: none;
+    }
+
     &:hover,
     :focus {
       color: rgba(#fff, 0.6);
@@ -27,4 +33,19 @@
     &:active {
       color: rgba(#fff, 0.3);
     }
+}
+
+@media (max-width: (variables.$min-desktop - 10px)) {
+  .navigation {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navigation__link {
+    margin: 0;
+
+    &--special {
+      display: inline;
+    }
+  }
 }

@@ -1,6 +1,4 @@
-.slider {
-    position: relative;
-}
+@use "../utils/variables.scss";
 
 .slider__slide {
     width: 97.2rem;
@@ -14,4 +12,27 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+@media (max-width: variables.$min-desktop) {
+  .slider__slide {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      display: block;
+      width: 100%;
+      height: 100%;
+
+      background-color: rgba(#000000, 0.4);
+    }
+  }
 }

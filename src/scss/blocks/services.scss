@@ -32,3 +32,11 @@
   margin-left: 3rem;
   margin-top: 4.5rem;
 }
+
+@media (max-width: variables.$min-desktop) {
+  .services__list {
+    justify-content: center;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}

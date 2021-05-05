@@ -5,6 +5,7 @@
     background-color: variables.$black;
     width: 100%;
     position: absolute;
+    z-index: 100;
 }
 
 .header__wrapper {
@@ -13,6 +14,14 @@
     display: flex;
     padding-top: 2.9rem;
     padding-bottom: 3rem;
+}
+
+.header__button {
+  display: none;
+}
+
+.header__navigation {
+  margin-left: 7.8rem;
 }
 
 .header__tel,
@@ -55,4 +64,34 @@
 .header__marker {
     top: 0;
     left: 0.3rem;
+}
+
+@media (max-width: variables.$min-desktop) {
+  .header {
+    background: none;
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+  }
+
+  .header__tel {
+    margin-right: 1rem;
+  }
+}
+
+@media (max-width: (variables.$min-desktop - 10px)) {
+  .header__navigation,
+  .header__tel,
+  .header__address {
+    display: none;
+  }
+
+  .header__button {
+    background: none;
+    border: none;
+
+    display: block;
+
+    margin-right: 0;
+    margin-left: auto;
+  }
 }
