@@ -1,6 +1,6 @@
 .navigation {
     display: flex;
-    margin-left: 78px;
+    margin-left: 7.8rem;
     padding-top: 0.7rem;
 }
 
@@ -11,5 +11,20 @@
     letter-spacing: 0.014rem;
     &:not(:first-child) {
         margin-left: 3.2rem;
+    }
+
+    &--footer {
+      &:not(:first-child) {
+        margin-left: 2.4rem;
+      }
+    }
+
+    &:hover,
+    :focus {
+      color: rgba(#fff, 0.6);
+    }
+
+    &:active {
+      color: rgba(#fff, 0.3);
     }
 }

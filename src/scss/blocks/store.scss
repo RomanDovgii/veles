@@ -1,5 +1,73 @@
 @use "../utils/variables";
+@use "../utils/mixins";
+
 
 .store {
     background-color: variables.$black;
+
+    padding-bottom: 10.9rem;
+}
+
+.store__wrapper {
+  @include mixins.wrapper-desktop;
+  margin: 0 auto;
+  display: flex;
+
+  padding-top: 13.3rem;
+}
+
+.store__content {
+  padding-left: 2.1rem;
+}
+
+%white-text {
+  color: #fff;
+}
+
+.store__heading {
+  font-weight: 600;
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-top: 7.2rem;
+  letter-spacing: 0.36rem;
+  @extend %white-text;
+}
+
+.store__text {
+  font-weight: 400;
+  font-size: 1.5rem;
+
+  width: 49.3rem;
+
+  margin-top: 3rem;
+  @extend %white-text;
+}
+
+.store__consult {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 1px solid #fff;
+  width: 27.7rem;
+  min-height: 5.5rem;
+  background-color: #161616;
+
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: 0.2rem;
+  color: #fff;
+
+  margin-top: 2.5rem;
+}
+
+.store__img-block {
+  position: relative;
+}
+
+.store__img {
+  position: absolute;
+  top: 0;
+  left: 8.7rem
 }

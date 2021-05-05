@@ -11,8 +11,8 @@
     @include mixins.wrapper-desktop;
     margin: 0 auto;
     display: flex;
-    padding-top: 29px;
-    padding-bottom: 30px;
+    padding-top: 2.9rem;
+    padding-bottom: 3rem;
 }
 
 .header__tel,
@@ -48,11 +48,11 @@
 }
 
 .header__phone {
-    top: 2px;
-    left: 1px;
+    top: 0.2rem;
+    left: 0.1rem;
 }
 
 .header__marker {
     top: 0;
-    left: 3px;
+    left: 0.3rem;
 }
