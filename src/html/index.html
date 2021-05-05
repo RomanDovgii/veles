@@ -11,7 +11,7 @@
 
 <body>
   <header class="header">
-    <div class="header__wrapper">
+    <div class="header__wrapper header__wrapper--menu-open">
       <h1 class="visually-hidden">Veles</h1>
       <a class="header__logo logo" href="#">
         <svg class="logo__img" width="91" height="38" viewBox="0 0 91 38" fill="none"
@@ -24,19 +24,25 @@
         </svg>
       </a>
 
-      <button class="header__button">
-        <svg width="26" height="18" viewBox="0 0 26 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <button class="header__button header__button--close">
+        <svg class="header__open" width="26" height="18" viewBox="0 0 26 18" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M1 17H25M1 1H25H1ZM1 9H25H1Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <svg class="header__close" width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M26 26L1 1M1 26L26 1L1 26Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
         <span class="visually-hidden">
           Открыть меню
         </span>
       </button>
 
-      <nav class="header__navigation navigation">
-        <a class="navigation__link" href="#">земля</a><a class="navigation__link"
-          href="#">крановые площадки</a><a class="navigation__link" href="#">выгрузка вагонов</a><a
-          class="navigation__link" href="#">фасовка</a><a class="navigation__link" href="#">щебень</a>
+      <nav class="header__navigation navigation header__navigation--open">
+        <a class="navigation__link" href="#">земля</a>
+        <a class="navigation__link" href="#">крановые площадки</a>
+        <a class="navigation__link" href="#">выгрузка вагонов</a>
+        <a href="#" class="navigation__link navigation__link--special">товары сельского хозяйства</a>
+        <a class="navigation__link" href="#">фасовка</a>
+        <a class="navigation__link" href="#">щебень</a>
       </nav>
       <a class="header__tel" href="tel:+79276784514">
         <svg class="header__phone" width="9" height="13" viewBox="0 0 9 13" fill="none"
