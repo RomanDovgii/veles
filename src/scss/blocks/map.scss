@@ -1,3 +1,5 @@
+@use "../utils/variables.scss";
+
 .map {
   display: flex;
   flex-direction: column;
@@ -15,4 +17,35 @@
 .map__img {
   margin-top: 4.7rem;
   margin-left: -4.9rem;
+}
+
+@media (max-width: variables.$min-desktop) {
+  .map {
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+  }
+
+  .map__img {
+    margin-left: 0;
+
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: variables.$mobile) {
+  .map {
+    padding-top: 6rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .map__heading {
+    font-size: 2rem;
+  }
+
+  .map__img {
+    margin-top: 2.5rem;
+    max-width: 31.8rem;
+  }
 }

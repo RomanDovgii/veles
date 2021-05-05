@@ -91,3 +91,21 @@
     }
   }
 }
+
+@media (max-width: variables.$mobile) {
+  .footer__wrapper {
+    padding-top: 3.89rem;
+  }
+
+  .footer__navigation {
+    padding-top: 0;
+    margin-top: 3.6rem;
+    text-transform: uppercase;
+
+    a:not(:first-child) {
+      font-size: 1.4rem;
+      margin-top: 2rem;
+      letter-spacing: 0.2rem;
+    }
+  }
+}

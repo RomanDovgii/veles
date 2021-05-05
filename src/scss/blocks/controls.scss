@@ -1,9 +1,8 @@
+@use "../utils/variables";
+
 .controls {
     display: flex;
     justify-content: flex-end;
-    margin-top: 7rem;
-    margin-right: 3.8rem;
-    margin-left: auto;
 }
 
 .controls__previous,
@@ -27,4 +26,31 @@
     color: #ffffff;
     font-size: 1.8rem;
     letter-spacing: 1rem;
+}
+
+@media (max-width: variables.$mobile) {
+  .controls__slides {
+    font-size: 1.5rem;
+    letter-spacing: 0.9rem;
+  }
+
+  .controls__arrow {
+    width: 1.9rem;
+    height: 0.6rem;
+  }
+
+  .controls__previous,
+  .controls__next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .controls__next {
+    margin-left: 0.3rem;
+  }
+
+  .controls__previous {
+      margin-right: 1.8rem;
+  }
 }

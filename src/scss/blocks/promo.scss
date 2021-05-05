@@ -13,6 +13,12 @@
     display: flex;
 }
 
+.promo__controls {
+  margin-top: 7rem;
+  margin-right: 3.8rem;
+  margin-left: auto;
+}
+
 .promo__slider {
   position: relative;
 }
@@ -70,5 +76,44 @@
   .promo__content {
     position: relative;
     z-index: 90;
+  }
+}
+
+
+@media (max-width: variables.$mobile) {
+  .promo {
+    padding-top: 0;
+  }
+
+  .promo__text {
+    font-size: 1.8rem;
+    line-height: 3.4rem;
+    letter-spacing: 0.2rem;
+
+    margin-top: 0rem;
+    padding-top: 16.25rem;
+    padding-left: 1.6rem;
+    padding-right: 1rem;
+  }
+
+  .promo__order {
+    padding: 0;
+    justify-content: center;
+    max-width: 16.8rem;
+    min-height: 5.5rem;
+    text-align: center;
+    margin-top: 3rem;
+    margin-left: 1.6rem;
+
+    font-size: 1.4rem;
+  }
+
+  .promo__controls {
+    margin-top: 4.7rem;
+    margin-right: 1.4rem;
+  }
+
+  .promo__content {
+    padding-bottom: 2.2rem;
   }
 }

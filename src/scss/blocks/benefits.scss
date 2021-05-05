@@ -80,3 +80,54 @@
     color: rgba(#000, 0.03);
   }
 }
+
+@media (max-width: variables.$min-benefits) {
+  .benefits__heading {
+    margin-left: 0;
+  }
+
+  .benefits__list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .benefits__item {
+    min-width: 27.3rem;
+
+    &:nth-child(3n + 1),
+    &:nth-child(3n + 2),
+    &:nth-child(3n + 3) {
+      flex-basis: auto;
+    }
+  }
+
+  .benefits__text {
+    &::before {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: variables.$mobile) {
+  .benefits {
+    padding-top: 0;
+  }
+
+  .benefits__heading {
+    font-size: 2rem;
+    padding-top: 6.1rem;
+  }
+
+  .benefits__list {
+    margin-top: 0;
+  }
+
+  .benefits__item {
+    margin-top: 3rem;
+    max-height: 5.1rem;
+
+    &:not(:first-child) {
+      margin-top: 3.5rem;
+    }
+  }
+}

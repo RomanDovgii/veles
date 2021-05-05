@@ -1,3 +1,5 @@
+@use "../utils/variables";
+
 .form {
   padding-top: 20rem;
   display: flex;
@@ -31,6 +33,7 @@
 
   padding-left: 2rem;
   padding-top: 1.8rem;
+  padding-right: 2rem;
   padding-bottom: 1.8rem;
 
   font-size: 1.6rem;
@@ -55,4 +58,68 @@
   letter-spacing: 0.07rem;
 
   margin-left: 1.5rem;
+}
+
+@media (max-width: variables.$min-benefits) {
+  .form__heading {
+    margin-left: 0;
+    padding-right: 1.6rem;
+    padding-left: 1.6rem;
+  }
+
+  .form__form {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+    width: 100%;
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  .form__input {
+    width: 100%;
+    max-width: 50rem;
+
+    &:not(:first-child) {
+      margin-left: 0;
+      margin-top: 2rem;
+    }
+  }
+
+  .form__submit {
+    margin-top: 2rem;
+    width: 100%;
+    max-width: 50rem;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: variables.$mobile) {
+  .form {
+    padding-top: 0;
+    padding-bottom: 6rem;
+  }
+
+  .form__heading {
+    font-size: 1.8rem;
+    margin-top: 5.9rem;
+    line-height: 2.4rem;
+  }
+
+  .form__form {
+    margin-top: 0;
+  }
+
+  .form__input {
+    &:not(:first-child) {
+      margin-top: 1.8rem;
+      min-width: 28.8rem;
+      height: 5rem;
+    }
+  }
+
+  .form__submit {
+    width: 28.8rem;
+    margin-top: 2.2rem;
+  }
 }

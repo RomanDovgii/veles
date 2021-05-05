@@ -34,9 +34,33 @@
 }
 
 @media (max-width: variables.$min-desktop) {
+  .services {
+    padding-top: 6rem;
+  }
+
   .services__list {
     justify-content: center;
     padding-left: 16px;
     padding-right: 16px;
+  }
+}
+
+@media (max-width: variables.$mobile) {
+  .services {
+    padding-bottom: 0;
+  }
+
+  .services__text {
+    font-size: 2rem;
+  }
+
+  .services__list {
+    margin-top: 0;
+  }
+
+  .services__service-card {
+    &:not(:first-child) {
+      margin-top: 3.5rem;
+    }
   }
 }

@@ -1,3 +1,5 @@
+@use "../utils/variables";
+
 .service-card {
   transition: transform 0.5s;
   position: relative;
@@ -5,6 +7,7 @@
   flex-direction: column;
   background-color: #ffffff;
   max-width: 37rem;
+  min-width: 28.8rem;
 
   &:hover {
     transform: translateY(-2rem);
@@ -18,8 +21,8 @@
 }
 
 .service-card__img {
-  width: 37rem;
-  height: 34.5rem;
+  width: 100%;
+  height: auto;
 }
 
 .service-card__name {
@@ -38,4 +41,14 @@
   letter-spacing: 0.28rem;
 
   min-height: 11.5rem;
+}
+
+@media (max-width: variables.$mobile) {
+  .service-card__name {
+    padding-right: 0;
+    padding-left: 2.5rem;
+    font-size: 1.6rem;
+    min-height: 8.9rem;
+    text-align: center;
+  }
 }
