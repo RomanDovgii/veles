@@ -139,3 +139,51 @@
     margin-left: 0;
   }
 }
+
+@media print {
+  .rent {
+    padding-bottom: 0;
+  }
+
+  .rent__wrapper {
+    padding-top: 0;
+  }
+
+  .rent__consult {
+    display: none;
+  }
+
+  .rent__img-block {
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin-bottom: 0;
+  }
+
+  .rent__content {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 0.5cm;
+  }
+
+  .rent__img {
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin-bottom: 0;
+  }
+
+  .rent__heading {
+    display: block;
+    margin-top: 0;
+    width: 100%;
+    font-size: 20pt;
+  }
+
+  .rent__text {
+    width: 100%;
+    margin-top: 0.3cm;
+    font-size: 15pt;
+  }
+}

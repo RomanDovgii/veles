@@ -131,3 +131,24 @@
     }
   }
 }
+
+@media print {
+  .benefits__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+  }
+
+  .benefits__item {
+    margin-top: 0.3cm;
+
+    &::after {
+      font-size: 11pt;
+    }
+  }
+
+  .benefits__heading {
+    font-size: 15pt;
+  }
+}

@@ -123,3 +123,9 @@
     margin-top: 2.2rem;
   }
 }
+
+@media print {
+  .form {
+    display: none;
+  }
+}

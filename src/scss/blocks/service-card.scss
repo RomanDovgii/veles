@@ -52,3 +52,24 @@
     text-align: center;
   }
 }
+
+@media print {
+  .service-card {
+    margin-top: 0.5cm;
+    margin-bottom: 0.5cm;
+    max-width: 4cm;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .service-card__img {
+    display: none;
+  }
+
+  .service-card__name {
+    padding: 0;
+    margin-top: 0.2cm;
+    min-height: auto;
+    font-size: 12pt;
+  }
+}
