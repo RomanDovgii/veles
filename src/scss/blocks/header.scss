@@ -103,6 +103,7 @@
   .header__button {
     background: none;
     border: none;
+    outline: none;
 
     display: flex;
     align-items: flex-start;
@@ -114,11 +115,19 @@
     margin-left: auto;
 
     .header__close {
-      display: none;
+      display: block;
+
+      &--hidden {
+        display: none;
+      }
     }
 
     .header__open {
       display: block;
+
+      &--hidden {
+        display: none;
+      }
     }
 
     &--close {
