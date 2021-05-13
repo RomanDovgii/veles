@@ -14,7 +14,7 @@ function generateHtmlPlugins(templateDir) {
         return new HtmlPlugin({
             filename: `${name}.html`,
             template: path.resolve(__dirname, `${templateDir}/${name}.${extension}`),
-            inject: true,
+            inject: false,
         })
     })
 }
