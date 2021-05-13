@@ -64,3 +64,18 @@
     }
   }
 }
+
+@media print {
+  .services {
+    page-break-after: always;
+  }
+
+  .services__list {
+    flex-direction: row;
+  }
+
+  .services__service-card {
+    margin-top: 0;
+    margin-left: 0;
+  }
+}

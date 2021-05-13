@@ -29,3 +29,9 @@
   color: #161616;
   white-space: nowrap;
 }
+
+@media print {
+  .on-map {
+    display: none;
+  }
+}

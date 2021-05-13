@@ -103,6 +103,7 @@
   .header__button {
     background: none;
     border: none;
+    outline: none;
 
     display: flex;
     align-items: flex-start;
@@ -112,6 +113,22 @@
     margin-top: 0.6rem;
     margin-right: 0;
     margin-left: auto;
+
+    .header__close {
+      display: block;
+
+      &--hidden {
+        display: none;
+      }
+    }
+
+    .header__open {
+      display: block;
+
+      &--hidden {
+        display: none;
+      }
+    }
 
     &--close {
       width: 2.7rem;
@@ -132,13 +149,10 @@
     margin-top: 10.3rem;
     width: 100%;
     height: 100%;
+    display: none;
 
     &--open {
       display: flex;
-    }
-
-    &--close {
-      display: none;
     }
 
     a:not(:first-child) {

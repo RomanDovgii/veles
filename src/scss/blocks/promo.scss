@@ -117,3 +117,26 @@
     padding-bottom: 2.2rem;
   }
 }
+
+@media print {
+  .promo {
+    padding-top: 2cm;
+  }
+
+  .promo__content {
+    &::before {
+      content: "+7 (927) 678-45-14";
+      font-size: 15pt;
+    }
+  }
+
+  .promo__text {
+    font-size: 20pt;
+    margin-top: 0;
+    color: #000;
+  }
+
+  .promo__order {
+    display: none;
+  }
+}

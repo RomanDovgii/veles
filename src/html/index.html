@@ -11,7 +11,7 @@
 
 <body>
   <header class="header">
-    <div class="header__wrapper header__wrapper--menu-open">
+    <div class="header__wrapper">
       <h1 class="visually-hidden">Veles</h1>
       <a class="header__logo logo" href="#">
         <svg class="logo__img" width="91" height="38" viewBox="0 0 91 38" fill="none"
@@ -23,12 +23,11 @@
 
         </svg>
       </a>
-
-      <button class="header__button header__button--close">
+      <button class="header__button">
         <svg class="header__open" width="26" height="18" viewBox="0 0 26 18" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M1 17H25M1 1H25H1ZM1 9H25H1Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
-        <svg class="header__close" width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="header__close header__close--hidden" width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M26 26L1 1M1 26L26 1L1 26Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
         <span class="visually-hidden">
@@ -36,7 +35,7 @@
         </span>
       </button>
 
-      <nav class="header__navigation navigation header__navigation--open">
+      <nav class="header__navigation navigation">
         <a class="navigation__link" href="#">земля</a>
         <a class="navigation__link" href="#">крановые площадки</a>
         <a class="navigation__link" href="#">выгрузка вагонов</a>
@@ -89,8 +88,25 @@
           </div>
         </div>
         <div class="promo__slider slider">
-          <div class="slider__slide"><img class="slider__img" src="/img/slides/first slide/train_cars@1x.jpg"
-              alt="train carts"></div>
+          <div class="slider__slide">
+            <picture>
+              <source type="image/webp"
+              srcset="/./img/slides/first/train_cars@0.5x.webp 0.5x,
+                      /./img/slides/first/train_cars@0.75x.webp 0.75x,
+                      /./img/slides/first/train_cars@1x.webp 1x,
+                      /./img/slides/first/train_cars@1x.webp 2x,
+                      /./img/slides/first/train_cars@1x.webp 3x">
+
+              <source type="image/jpg"
+              srcset="/./img/slides/first/train_cars@0.5x.jpg 0.5x,
+                      /./img/slides/first/train_cars@0.75x.jpg 0.75x,
+                      /./img/slides/first/train_cars@1x.jpg 1x,
+                      /./img/slides/first/train_cars@1x.jpg 2x,
+                      /./img/slides/first/train_cars@1x.jpg 3x">
+
+              <img class="slider__img" src="/./img/slides/first/train_cars@1x.jpg" alt="train carts">
+            </picture>
+          </div>
         </div>
       </div>
     </section>
@@ -101,58 +117,194 @@
         <ul class="services__list">
           <li class="services__service-card service-card" aria-label="Услуга" tabindes="0">
             <a href="#" class="service-card__on-map on-map on-map on-map--open">
-              <img class="on-map__img" width="36" height="36" src="./img/icons/map/map@1x.png" alt="Иконка карты">
+              <img class="on-map__img" width="36" height="36" src="././img/icons/map/map@1x.png" alt="Иконка карты">
               <span class="on-map__text">Смотреть карту территорий</span>
             </a>
-            <img width="370" height="345" class="service-card__img" src="img/services/crane@1x.jpg"
-              alt="Крановая площадка">
+            <picture>
+              <source type="image/webp"
+              srcset="./img/services/crane@0.5x.webp 0.5x,
+                      ./img/services/crane@0.75x.webp 0.75x,
+                      ./img/services/crane@1x.webp 1x,
+                      ./img/services/crane@2x.webp 2x,
+                      ./img/services/crane@3x.webp 3x">
+
+              <source type="image/jpg"
+              srcset="./img/services/crane@0.5x.jpg 0.5x,
+                      ./img/services/crane@0.75x.jpg 0.75x,
+                      ./img/services/crane@1x.jpg 1x,
+                      ./img/services/crane@2x.jpg 2x,
+                      ./img/services/crane@3x.jpg 3x">
+
+              <img width="370" height="345" class="service-card__img" src="./img/services/crane@1x.jpg" alt="Крановая площадка">
+            </picture>
             <a class="service-card__name" href="#">Крановая площадка</a>
           </li>
           <li class="services__service-card service-card" aria-label="Услуга" tabindes="0">
-            <img width="370" height="345" class="service-card__img" src="img/services/agriculture@1x.jpg"
-              alt="Товары сельского хозяйства">
+            <picture>
+              <source type="image/webp"
+              srcset="./img/services/agriculture@0.5x.webp 0.5x,
+                      ./img/services/agriculture@0.75x.webp 0.75x,
+                      ./img/services/agriculture@1x.webp 1x,
+                      ./img/services/agriculture@2x.webp 2x,
+                      ./img/services/agriculture@3x.webp 3x">
+
+              <source type="image/jpg"
+              srcset="./img/services/agriculture@0.5x.jpg 0.5x,
+                      ./img/services/agriculture@0.75x.jpg 0.75x,
+                      ./img/services/agriculture@1x.jpg 1x,
+                      ./img/services/agriculture@2x.jpg 2x,
+                      ./img/services/agriculture@3x.jpg 3x">
+
+              <img width="370" height="345" class="service-card__img" src="./img/services/agriculture@1x.jpg" alt="Товары сельского хозяйства">
+            </picture>
             <a class="service-card__name" href="#">Товары сельского хозяйства</a>
           </li>
           <li class="services__service-card service-card" aria-label="Услуга" tabindes="0">
-            <img width="370" height="345" class="service-card__img" src="img/services/package@1x.jpg"
-              alt="Фасовка от 300 гр до 1 тонны">
+            <picture>
+              <source type="image/webp"
+              srcset="./img/services/package@0.5x.webp 0.5x,
+                      ./img/services/package@0.75x.webp 0.75x,
+                      ./img/services/package@1x.webp 1x,
+                      ./img/services/package@2x.webp 2x,
+                      ./img/services/package@3x.webp 3x">
+
+              <source type="image/jpg"
+              srcset="./img/services/package@0.5x.jpg 0.5x,
+                      ./img/services/package@0.75x.jpg 0.75x,
+                      ./img/services/package@1x.jpg 1x,
+                      ./img/services/package@2x.jpg 2x,
+                      ./img/services/package@3x.jpg 3x">.
+
+              <img width="370" height="345" class="service-card__img" src="./img/services/package@1x.jpg" alt="Фасовка от 300 гр до 1 тонны">
+            </picture>
             <a class="service-card__name" href="#">Фасовка от 300 гр до 1 тонны</a>
           </li>
           <li class="services__service-card service-card" aria-label="Услуга" tabindes="0">
-            <img width="370" height="345" class="service-card__img" src="img/services/gravel@1x.jpg"
-              alt="Гранитный щебень">
+            <picture>
+              <source type="image/webp"
+              srcset="./img/services/gravel@0.5x.webp 0.5x,
+                      ./img/services/gravel@0.75x.webp 0.75x,
+                      ./img/services/gravel@1x.webp 1x,
+                      ./img/services/gravel@2x.webp 2x,
+                      ./img/services/gravel@3x.webp 3x">
+
+              <source type="image/jpg"
+              srcset="./img/services/gravel@0.5x.jpg 0.5x,
+                      ./img/services/gravel@0.75x.jpg 0.75x,
+                      ./img/services/gravel@1x.jpg 1x,
+                      ./img/services/gravel@2x.jpg 2x,
+                      ./img/services/gravel@3x.jpg 3x">
+
+              <img width="370" height="345" class="service-card__img" src="./img/services/gravel@1x.jpg" alt="Гранитный щебень">
+            </picture>
             <a class="service-card__name" href="#">Гранитный щебень</a>
           </li>
           <li class="services__service-card service-card" aria-label="Услуга" tabindes="0">
             <a class="service-card__on-map on-map">
-              <img class="on-map__img" width="36" height="36" src="./img/icons/map/map@1x.png" alt="Иконка карты">
+              <img class="on-map__img" width="36" height="36" src="././img/icons/map/map@1x.png" alt="Иконка карты">
               <span class="on-map__text">Смотреть карту территорий</span>
             </a>
-            <img width="370" height="345" class="service-card__img" src="img/services/rent@1x.jpg" alt="Аренда земли">
+            <picture>
+              <source type="image/webp"
+              srcset="./img/services/rent@0.5x.webp 0.5x,
+                      ./img/services/rent@0.75x.webp 0.75x,
+                      ./img/services/rent@1x.webp 1x,
+                      ./img/services/rent@2x.webp 2x,
+                      ./img/services/rent@3x.webp 3x">
+
+              <source type="image/jpg"
+              srcset="./img/services/rent@0.5x.jpg 0.5x,
+                      ./img/services/rent@0.75x.jpg 0.75x,
+                      ./img/services/rent@1x.jpg 1x,
+                      ./img/services/rent@2x.jpg 2x,
+                      ./img/services/rent@3x.jpg 3x">
+
+              <img width="370" height="345" class="service-card__img" src="./img/services/rent@1x.jpg" alt="Аренда земли">
+            </picture>
             <a class="service-card__name" href="#">Аренда земли</a>
           </li>
           <li class="services__service-card service-card" aria-label="Услуга" tabindes="0">
             <a class="service-card__on-map on-map">
-              <img class="on-map__img" width="36" height="36" src="./img/icons/map/map@1x.png" alt="Иконка карты">
+              <img class="on-map__img" width="36" height="36" src="././img/icons/map/map@1x.png" alt="Иконка карты">
               <span class="on-map__text">Смотреть карту территорий</span>
             </a>
-            <img width="370" height="345" class="service-card__img" src="img/services/storage@1x.jpg"
-              alt="Аренда складов">
+            <picture>
+              <source type="image/webp"
+              srcset="./img/services/storage@0.5x.webp 0.5x,
+                      ./img/services/storage@0.75x.webp 0.75x,
+                      ./img/services/storage@1x.webp 1x,
+                      ./img/services/storage@2x.webp 2x,
+                      ./img/services/storage@3x.webp 3x">
+
+              <source type="image/jpg"
+              srcset="./img/services/storage@0.5x.jpg 0.5x,
+                      ./img/services/storage@0.75x.jpg 0.75x,
+                      ./img/services/storage@1x.jpg 1x,
+                      ./img/services/storage@2x.jpg 2x,
+                      ./img/services/storage@3x.jpg 3x">
+
+              <img width="370" height="345" class="service-card__img" src="./img/services/storage@1x.jpg" alt="Аренда складов">
+            </picture>
             <a class="service-card__name" href="#">Аренда складов</a>
           </li>
           <li class="services__service-card service-card" aria-label="Услуга" tabindes="0">
-            <img width="370" height="345" class="service-card__img" src="img/services/unloading@1x.jpg"
-              alt="Выгрузка вагонов и ответственное хранение">
+            <picture>
+              <source type="image/webp"
+              srcset="./img/services/unloading@0.5x.webp 0.5x,
+                      ./img/services/unloading@0.75x.webp 0.75x,
+                      ./img/services/unloading@1x.webp 1x,
+                      ./img/services/unloading@2x.webp 2x,
+                      ./img/services/unloading@3x.webp 3x">
+
+              <source type="image/jpg"
+              srcset="./img/services/unloading@0.5x.jpg 0.5x,
+                      ./img/services/unloading@0.75x.jpg 0.75x,
+                      ./img/services/unloading@1x.jpg 1x,
+                      ./img/services/unloading@2x.jpg 2x,
+                      ./img/services/unloading@3x.jpg 3x">
+
+              <img width="370" height="345" class="service-card__img" src="./img/services/unloading@1x.jpg" alt="Выгрузка вагонов и ответственное хранение">
+            </picture>
             <a class="service-card__name" href="#">Выгрузка вагонов и ответственное хранение</a>
           </li>
           <li class="services__service-card service-card" aria-label="Услуга" tabindes="0">
-            <img width="370" height="345" class="service-card__img" src="img/services/scale@1x.jpg"
-              alt="Автомобильные весы 18м, 80тн">
+            <picture>
+              <source type="image/webp"
+              srcset="./img/services/scale@0.5x.webp 0.5x,
+                      ./img/services/scale@0.75x.webp 0.75x,
+                      ./img/services/scale@1x.webp 1x,
+                      ./img/services/scale@2x.webp 2x,
+                      ./img/services/scale@3x.webp 3x">
+
+              <source type="image/jpg"
+              srcset="./img/services/scale@0.5x.jpg 0.5x,
+                      ./img/services/scale@0.75x.jpg 0.75x,
+                      ./img/services/scale@1x.jpg 1x,
+                      ./img/services/scale@2x.jpg 2x,
+                      ./img/services/scale@3x.jpg 3x">
+
+              <img width="370" height="345" class="service-card__img" src="./img/services/scale@1x.jpg" alt="Автомобильные весы 18м, 80тн">
+            </picture>
             <a class="service-card__name" href="#">Автомобильные весы 18м, 80тн</a>
           </li>
           <li class="services__service-card service-card" aria-label="Услуга" tabindes="0">
-            <img width="370" height="345" class="service-card__img" src="img/services/scale-trains@1x.jpg"
-              alt="Железнодорожные весы на 2 вагона">
+            <picture>
+              <source type="image/webp"
+              srcset="./img/services/scale-trains@0.5x.webp 0.5x,
+                      ./img/services/scale-trains@0.75x.webp 0.75x,
+                      ./img/services/scale-trains@1x.webp 1x,
+                      ./img/services/scale-trains@2x.webp 2x,
+                      ./img/services/scale-trains@3x.webp 3x">
+
+              <source type="image/jpg"
+              srcset="./img/services/scale-trains@0.5x.jpg 0.5x,
+                      ./img/services/scale-trains@0.75x.jpg 0.75x,
+                      ./img/services/scale-trains@1x.jpg 1x,
+                      ./img/services/scale-trains@2x.jpg 2x,
+                      ./img/services/scale-trains@3x.jpg 3x">
+
+              <img width="370" height="345" class="service-card__img" src="./img/services/scale-trains@1x.jpg" alt="Железнодорожные весы на 2 вагона">
+            </picture>
             <a class="service-card__name" href="#">Железнодорожные весы на 2 вагона</a>
           </li>
         </ul>
@@ -192,7 +344,7 @@
     </section>
     <section class="map">
       <h2 class="map__heading">Карта территорий</h2>
-      <img width="1109" height="692" class="map__img" src="img/map/map.svg" alt="Карта нашей территории">
+      <img width="1109" height="692" class="map__img" src="./img/map/map.svg" alt="Карта нашей территории">
     </section>
     <section class="rent">
       <div class="rent__wrapper">
@@ -207,8 +359,25 @@
             путь, пандусы для выгрузки крытых вагонов и фур.
           </p><a class="rent__consult" href="#">Получить консультацию </a>
         </div>
-        <div class="rent__img-block"> <img class="rent__img" src="img/promo/rent@1x.jpg"
-            alt="Виды на ваше будущее арендованное место"></div>
+        <div class="rent__img-block">
+          <picture>
+            <source type="image/webp"
+            srcset="./img/promo/rent@0.5x.webp 0.5x,
+                    ./img/promo/rent@0.75x.webp 0.75x,
+                    ./img/promo/rent@1x.webp 1x,
+                    ./img/promo/rent@2x.webp 2x,
+                    ./img/promo/rent@3x.webp 3x">
+
+            <source type="image/jpg"
+            srcset="./img/promo/rent@0.5x.jpg 0.5x,
+                    ./img/promo/rent@0.75x.jpg 0.75x,
+                    ./img/promo/rent@1x.jpg 1x,
+                    ./img/promo/rent@2x.jpg 2x,
+                    ./img/promo/rent@3x.jpg 3x">
+
+            <img class="rent__img" src="./img/promo/rent@1x.jpg" alt="Виды на ваше будущее арендованное место">
+          </picture>
+        </div>
       </div>
     </section>
     <section class="store">
@@ -222,7 +391,23 @@
             сетей.</p><a class="store__consult" href="#">Получить консультацию</a>
         </div>
         <div class="store__img-block">
-          <img class="store__img" src="img/promo/store@1x.jpg" alt="Вид на ваш будущий склад">
+          <picture>
+            <source type="image/webp"
+            srcset="./img/promo/store@0.5x.webp 0.5x,
+                    ./img/promo/store@0.75x.webp 0.75x,
+                    ./img/promo/store@1x.webp 1x,
+                    ./img/promo/store@2x.webp 2x,
+                    ./img/promo/store@3x.webp 3x">
+
+            <source type="image/jpg"
+            srcset="./img/promo/store@0.5x.jpg 0.5x,
+                    ./img/promo/store@0.75x.jpg 0.75x,
+                    ./img/promo/store@1x.jpg 1x,
+                    ./img/promo/store@2x.jpg 2x,
+                    ./img/promo/store@3x.jpg 3x">
+
+            <img class="store__img" src="./img/promo/store@1x.jpg" alt="Вид на ваш будущий склад">
+          </picture>
         </div>
       </div>
     </section>

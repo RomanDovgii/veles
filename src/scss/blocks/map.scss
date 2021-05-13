@@ -49,3 +49,9 @@
     max-width: 31.8rem;
   }
 }
+
+@media print {
+  .map {
+    page-break-before: always;
+  }
+}

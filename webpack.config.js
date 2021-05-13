@@ -25,19 +25,20 @@ module.exports = {
     mode: `development`,
     entry: [
         `./src/js/index.js`,
-        `./src/scss/style.scss`
+        `./src/scss/style.scss`,
+        `./src/html/index.html`
     ],
     output: {
         filename: `./js/bundle.js`,
         path: path.resolve(__dirname, `build`),
     },
+    target: `web`,
+    devtool: `source-map`,
     devServer: {
         contentBase: path.resolve(__dirname, `build`),
-        open: false,
+        open: true,
         port: 9111,
-        historyApiFallback: true,
-        contentBase: path.resolve(__dirname, `/build`),
-        watchContentBase: true,
+        watchContentBase: true
     },
     module: {
         rules: [
