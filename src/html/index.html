@@ -131,7 +131,7 @@
       <div class="services__wrapper">
         <p class="services__text">Чем мы можем быть полезны?</p>
         <ul class="services__list">
-          <li class="services__service-card service-card" aria-label="Услуга" tabindes="0">
+          <li class="services__service-card service-card" tabindex="0">
             <a href="#" class="service-card__on-map on-map on-map on-map--open">
               <img class="on-map__img" width="36" height="36" src="././img/icons/map/map@1x.png" alt="Иконка карты">
               <span class="on-map__text">Смотреть карту территорий</span>
@@ -155,7 +155,7 @@
             </picture>
             <a class="service-card__name" href="#">Крановая площадка</a>
           </li>
-          <li class="services__service-card service-card" aria-label="Услуга" tabindes="0">
+          <li class="services__service-card service-card" tabindex="0">
             <picture>
               <source type="image/webp"
               srcset="./img/services/agriculture@0.5x.webp 0.5x,
@@ -175,7 +175,7 @@
             </picture>
             <a class="service-card__name" href="#">Товары сельского хозяйства</a>
           </li>
-          <li class="services__service-card service-card" aria-label="Услуга" tabindes="0">
+          <li class="services__service-card service-card" tabindex="0">
             <picture>
               <source type="image/webp"
               srcset="./img/services/package@0.5x.webp 0.5x,
@@ -189,13 +189,13 @@
                       ./img/services/package@0.75x.jpg 0.75x,
                       ./img/services/package@1x.jpg 1x,
                       ./img/services/package@2x.jpg 2x,
-                      ./img/services/package@3x.jpg 3x">.
+                      ./img/services/package@3x.jpg 3x">
 
               <img width="370" height="345" class="service-card__img" src="./img/services/package@1x.jpg" alt="Фасовка от 300 гр до 1 тонны">
             </picture>
             <a class="service-card__name" href="#">Фасовка от 300 гр до 1 тонны</a>
           </li>
-          <li class="services__service-card service-card" aria-label="Услуга" tabindes="0">
+          <li class="services__service-card service-card" tabindex="0">
             <picture>
               <source type="image/webp"
               srcset="./img/services/gravel@0.5x.webp 0.5x,
@@ -215,7 +215,7 @@
             </picture>
             <a class="service-card__name" href="#">Гранитный щебень</a>
           </li>
-          <li class="services__service-card service-card" aria-label="Услуга" tabindes="0">
+          <li class="services__service-card service-card" tabindex="0">
             <a class="service-card__on-map on-map">
               <img class="on-map__img" width="36" height="36" src="././img/icons/map/map@1x.png" alt="Иконка карты">
               <span class="on-map__text">Смотреть карту территорий</span>
@@ -239,7 +239,7 @@
             </picture>
             <a class="service-card__name" href="#">Аренда земли</a>
           </li>
-          <li class="services__service-card service-card" aria-label="Услуга" tabindes="0">
+          <li class="services__service-card service-card" tabindex="0">
             <a class="service-card__on-map on-map">
               <img class="on-map__img" width="36" height="36" src="././img/icons/map/map@1x.png" alt="Иконка карты">
               <span class="on-map__text">Смотреть карту территорий</span>
@@ -263,7 +263,7 @@
             </picture>
             <a class="service-card__name" href="#">Аренда складов</a>
           </li>
-          <li class="services__service-card service-card" aria-label="Услуга" tabindes="0">
+          <li class="services__service-card service-card" tabindex="0">
             <picture>
               <source type="image/webp"
               srcset="./img/services/unloading@0.5x.webp 0.5x,
@@ -283,7 +283,7 @@
             </picture>
             <a class="service-card__name" href="#">Выгрузка вагонов и ответственное хранение</a>
           </li>
-          <li class="services__service-card service-card" aria-label="Услуга" tabindes="0">
+          <li class="services__service-card service-card" tabindex="0">
             <picture>
               <source type="image/webp"
               srcset="./img/services/scale@0.5x.webp 0.5x,
@@ -303,7 +303,7 @@
             </picture>
             <a class="service-card__name" href="#">Автомобильные весы 18м, 80тн</a>
           </li>
-          <li class="services__service-card service-card" aria-label="Услуга" tabindes="0">
+          <li class="services__service-card service-card" tabindex="0">
             <picture>
               <source type="image/webp"
               srcset="./img/services/scale-trains@0.5x.webp 0.5x,
@@ -431,9 +431,9 @@
       <h2 class="form__heading">УЗНАТЬ О ЦЕНАХ, ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ ИЛИ&nbsp;ПЕРСОНАЛЬНОЕ ПРЕДЛОЖЕНИЕ</h2>
       <form class="form__form">
         <label class="visually-hidden" for="name">Имя </label>
-        <input class="form__input" type="text" name="name" placeholder="Имя" required>
+        <input class="form__input" type="text" name="name" id="name" placeholder="Имя" required>
         <label class="visually-hidden" for="tel">Телефон </label>
-        <input class="form__input" type="text" name="tel" placeholder="Телефон" required>
+        <input class="form__input" type="text" name="tel" id="tel" placeholder="Телефон" required>
         <button class="form__submit" type="submit">Отправить </button>
       </form>
     </section>
