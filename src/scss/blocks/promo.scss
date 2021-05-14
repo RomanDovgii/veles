@@ -121,6 +121,7 @@
 @media print {
   .promo {
     padding-top: 2cm;
+    background: none;
   }
 
   .promo__content {
@@ -128,6 +129,10 @@
       content: "+7 (927) 678-45-14";
       font-size: 15pt;
     }
+  }
+
+  .promo__slider {
+    display: none;
   }
 
   .promo__text {

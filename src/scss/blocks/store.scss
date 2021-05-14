@@ -145,6 +145,8 @@
 @media print {
   .store {
     padding-bottom: 0;
+    background: none;
+    margin-top: 3cm;
   }
 
   .store__wrapper {
